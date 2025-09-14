@@ -54,8 +54,11 @@ const director1: Director = {
   numberOfReports: 17,
 };
 
-function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
-  return `${firstName[0]}. ${lastName}`;
+function printTeacher(firstName: string, lastName: string): string {
+ 
+  firstName = firstName[0];
+
+  return `${firstName}. ${lastName}`;
 }
 
 
@@ -65,7 +68,7 @@ console.log(director1);
 
 console.log(teacher1);
 
-console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
+console.log(printTeacher("John", "Doe")); // J. Doe
 
 console.log(student.displayName()); // Alice
 console.log(student.workOnHomework()); // Currently working
