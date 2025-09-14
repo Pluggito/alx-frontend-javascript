@@ -20,7 +20,7 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   constructor(private firstName: string, private lastName: string) {}
 
   workOnHomework(): string {
