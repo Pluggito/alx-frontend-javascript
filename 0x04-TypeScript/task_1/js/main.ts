@@ -7,11 +7,6 @@ interface Teacher {
   [key: string]: any;                 
 }
 
-// Directors interface extending Teacher
-interface Directors extends Teacher {
-  numberOfReports: number;            
-}
-
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
@@ -37,7 +32,7 @@ class StudentClass implements StudentClassInterface {
   }
 }
 
-// Example usage:
+
 const teacher1: Teacher = {
   firstName: "Jane",
   lastName: "Doe",
@@ -45,6 +40,11 @@ const teacher1: Teacher = {
   location: "Lagos",
   contract: false,            
 };
+
+// Directors interface extending Teacher
+interface Directors extends Teacher {
+  numberOfReports: number;            
+}
 
 const director1: Directors = {
   firstName: 'James',
