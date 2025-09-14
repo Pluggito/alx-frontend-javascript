@@ -55,7 +55,7 @@ function executeWork(employee: Director | Teacher): string {
 
 type Subjects = "Maths" | "History";
 
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass:Subjects): string {
   if(todayClass === "Maths") {
     return "Teaching Maths";
   }
