@@ -54,11 +54,8 @@ const director1: Director = {
 };
 
 function printTeacher(firstName: string, lastName: string): string {
-  const { firstName: fn, lastName: ln } = { firstName, lastName };
-  const firstInitial = fn[0];
-  const lastInitial = ln
-
-  return `${firstInitial}. ${lastInitial}`;
+  
+  return `${firstName[0]}. ${lastName}`;
 }
 
 const student: StudentClassInterface = new StudentClass("Alice", "Smith");
