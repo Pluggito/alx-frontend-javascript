@@ -28,7 +28,7 @@ class StudentClass implements StudentClassInterface {
   }
 
   displayName(): string {
-    return this.lastName;
+    return this.firstName && this.lastName;
   }
 }
 
