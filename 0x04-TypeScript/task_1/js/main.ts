@@ -54,9 +54,10 @@ const director1: Director = {
   numberOfReports: 17,
 };
 
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
+function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
   return `${firstName.charAt(0)}. ${lastName}`;
-};
+}
+
 
 const student: StudentClassInterface = new StudentClass("Alice", "Smith");
 
@@ -64,7 +65,7 @@ console.log(director1);
 
 console.log(teacher1);
 
-console.log(printTeacher("John", "Doe")); // J. Doe
+console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
 
 console.log(student.displayName()); // Alice
 console.log(student.workOnHomework()); // Currently working
