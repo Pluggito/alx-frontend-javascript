@@ -42,11 +42,11 @@ const teacher1: Teacher = {
 };
 
 // Directors interface extending Teacher
-interface Directors extends Teacher {
+interface Director extends Teacher {
   numberOfReports: number;            
 }
 
-const director1: Directors = {
+const director1: Director = {
   firstName: 'James',
   lastName: 'Daveson',
   location: 'London',
