@@ -53,17 +53,17 @@ function executeWork(employee: Director | Teacher): string {
   return employee.workTeacherTasks();
 }
 
+type Subjects = "Maths" | "History";
 
-function todayClass(Subjects: "Maths" | "History"):string {
-  if(Subjects === "Maths") {
+function teachClass(todayClass: Subjects): string {
+  if(todayClass === "Maths") {
     return "Teaching Maths";
   }
   return "Teaching History";
 }
 
-
-console.log(todayClass('Maths'));
-console.log(todayClass('History'));
+console.log(teachClass('Maths'));
+console.log(teachClass('History'));
 
 const emp5 = createEmployee(200);
 console.log(executeWork(emp5)); 
