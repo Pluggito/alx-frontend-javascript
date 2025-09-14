@@ -54,7 +54,7 @@ function executeWork(employee: Director | Teacher): string {
 }
 
 
-function teachClass(Subjects: "Maths" | "History"):string {
+function todayClass(Subjects: "Maths" | "History"):string {
   if(Subjects === "Maths") {
     return "Teaching Maths";
   }
@@ -62,8 +62,8 @@ function teachClass(Subjects: "Maths" | "History"):string {
 }
 
 
-console.log(teachClass('Maths'));
-console.log(teachClass('History'));
+console.log(todayClass('Maths'));
+console.log(todayClass('History'));
 
 const emp5 = createEmployee(200);
 console.log(executeWork(emp5)); 
