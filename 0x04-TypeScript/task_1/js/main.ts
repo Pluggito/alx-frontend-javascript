@@ -1,10 +1,10 @@
 interface Teacher {
-  readonly firstName: string;         
-  readonly lastName: string;          
-  fullTimeEmployee: boolean;          
-  yearsOfExperience?: number;         
-  location: string;                   
-  [key: string]: any;                 
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
+  location: string;
+  [key: string]: any;
 }
 
 interface printTeacherFunction {
@@ -32,43 +32,41 @@ class StudentClass implements StudentClassInterface {
   }
 }
 
-
 const teacher1: Teacher = {
   firstName: "Jane",
   lastName: "Doe",
   fullTimeEmployee: true,
   location: "Lagos",
-  contract: false,            
+  contract: false,
 };
 
-// Directors interface extending Teacher
+// Director interface extending Teacher
 interface Director extends Teacher {
-  numberOfReports: number;            
+  numberOfReports: number;
 }
 
 const director1: Director = {
-  firstName: 'James',
-  lastName: 'Daveson',
-  location: 'London',
+  firstName: "James",
+  lastName: "Daveson",
+  location: "London",
   fullTimeEmployee: true,
   numberOfReports: 17,
 };
 
+
 function printTeacher(firstName: string, lastName: string): string {
  
-  firstName = firstName[0];
-
-  return `${firstName}. ${lastName}`;
+  const { firstName: fn, lastName: ln } = { firstName, lastName };
+  const firstInitial = fn[0];
+ 
+  return `${firstInitial}. ${ln}`;
 }
-
 
 const student: StudentClassInterface = new StudentClass("Alice", "Smith");
 
+// Demo logs (optional)
 console.log(director1);
-
 console.log(teacher1);
-
 console.log(printTeacher("John", "Doe")); // J. Doe
-
-console.log(student.displayName()); // Alice
-console.log(student.workOnHomework()); // Currently working
+console.log(student.displayName());       // Alice
+console.log(student.workOnHomework());    // Currently working
