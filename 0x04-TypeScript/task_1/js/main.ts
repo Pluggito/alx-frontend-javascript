@@ -54,6 +54,7 @@ const director1: Director = {
 };
 
 function printTeacher(firstName: string, lastName: string): string {
+    const { firstName: firstN, lastName:lastN } = { firstName, lastName };
   return `${firstName}. ${lastName}`;
 }
 
