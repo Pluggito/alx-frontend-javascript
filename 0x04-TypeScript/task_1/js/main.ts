@@ -53,13 +53,12 @@ const director1: Director = {
   numberOfReports: 17,
 };
 
-
 function printTeacher(firstName: string, lastName: string): string {
- 
   const { firstName: fn, lastName: ln } = { firstName, lastName };
   const firstInitial = fn[0];
- 
-  return `${firstInitial}. ${ln}`;
+  const lastInitial = ln
+
+  return `${firstInitial}. ${lastInitial}`;
 }
 
 const student: StudentClassInterface = new StudentClass("Alice", "Smith");
@@ -68,5 +67,5 @@ const student: StudentClassInterface = new StudentClass("Alice", "Smith");
 console.log(director1);
 console.log(teacher1);
 console.log(printTeacher("John", "Doe")); // J. Doe
-console.log(student.displayName());       // Alice
-console.log(student.workOnHomework());    // Currently working
+console.log(student.displayName()); // Alice
+console.log(student.workOnHomework()); // Currently working
